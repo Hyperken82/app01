@@ -4,17 +4,23 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Hello World!");
+		
+		
+		System.out.println("Banking services!");
 
 		Scanner input = new Scanner(System.in);
-
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
-
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
-
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		System.out.println("Enter your ID:");
+		String id=input.nextLine();
+		System.out.println("Enter your password:");
+		String pass=input.nextLine();
+		
+		if ((id.equals("010"))&& (pass.equals("123"))){
+			System.out.println("Login success!");
+			Display mydisplay = new Display();
+			mydisplay.menu();
+			
+			}
+	else 
+		System.out.println("Login fail!");
 	}
 }
